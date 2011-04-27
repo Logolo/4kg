@@ -141,20 +141,40 @@ a.install {
 	background: -webkit-gradient(linear, left top, left bottom, from(#7A7AFF), to(#4747FF));
 	background: -moz-linear-gradient(top,  #7A7AFF,  #4747FF);
 }
+a.install:active {
+	background: gray;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4747FF), to(#7A7AFF));
+	background: -moz-linear-gradient(top,  #4747FF,  #7A7AFF);
+}
 a.donate {
 	background: gray;
 	background: -webkit-gradient(linear, left top, left bottom, from(#00CC00), to(#009900));
 	background: -moz-linear-gradient(top,  #00CC00,  #009900);
+}
+a.donate:active {
+	background: gray;
+	background: -webkit-gradient(linear, left top, left bottom, from(#009900), to(#00CC00));
+	background: -moz-linear-gradient(top,  #009900,  #00CC00);
 }
 a.get {
 	background: gray;
 	background: -webkit-gradient(linear, left top, left bottom, from(#CC00CC), to(#990099));
 	background: -moz-linear-gradient(top,  #CC00CC,  #990099);
 }
+a.get:active {
+	background: gray;
+	background: -webkit-gradient(linear, left top, left bottom, from(#990099), to(#CC00CC));
+	background: -moz-linear-gradient(top,  #990099,  #CC00CC);
+}
 a.read {
 	background: gray;
 	background: -webkit-gradient(linear, left top, left bottom, from(#FF7A7A), to(#FF4747));
 	background: -moz-linear-gradient(top,  #FF7A7A,  #FF4747);
+}
+a.read:active {
+	background: gray;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FF4747), to(#FF7A7A));
+	background: -moz-linear-gradient(top,  #FF4747,  #FF7A7A);
 }
 span.big {
 	display: block;
