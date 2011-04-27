@@ -98,11 +98,9 @@ header {
   border: 0;
 }
 #main {
-	position: absolute;
-	right: 5%;
-	width: 55%;
+	width: 40%;
+	margin: 10px auto;
 	color: white;
-	margin-top: 16px;
 	padding: 20px;
 	background-image: url('../img/background-light.png');
 	background-repeat: repeat;
@@ -115,21 +113,27 @@ header {
 p+p {
 	margin-top: 20px;
 }
+ul, li {
+	margin: 0px;
+	padding: 0px;
+}
 #links {
 	position: fixed;
-	top: 230px;
-	left: 5%;
+	top: 224px;
+	left: 0px;
 	list-style: none;
-	width: 250px;
+	width: 28%;
 }
 #links li+li {
 	padding-top: 15px;
 }
 #links li a {
 	display: block;
-	border-radius: 8px;
+	width: 230px;
+	margin: 0px auto;
 	padding: 5px 15px;
 	color: white;
+	border-radius: 8px;
 	text-align: center;
 	text-decoration: none;
 }
@@ -158,13 +162,13 @@ a.donate:active {
 }
 a.get {
 	background: gray;
-	background: -webkit-gradient(linear, left top, left bottom, from(#CC00CC), to(#990099));
-	background: -moz-linear-gradient(top,  #CC00CC,  #990099);
+	background: -webkit-gradient(linear, left top, left bottom, from(#0066CC), to(#004D99));
+	background: -moz-linear-gradient(top,  #0066CC,  #004D99);
 }
 a.get:active {
 	background: gray;
-	background: -webkit-gradient(linear, left top, left bottom, from(#990099), to(#CC00CC));
-	background: -moz-linear-gradient(top,  #990099,  #CC00CC);
+	background: -webkit-gradient(linear, left top, left bottom, from(#000066), to(#000099));
+	background: -moz-linear-gradient(top,  #000066,  #000099);
 }
 a.read {
 	background: gray;
@@ -183,7 +187,7 @@ span.big {
 footer {
 	position: fixed;
 	bottom: 0px;
-	left: 0px;
+	right: 0px;
 }
 
 
