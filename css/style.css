@@ -141,12 +141,6 @@ iframe {
 	width: 40%;
 	margin: 10px auto;
 }
-@media (max-width: 1200px) {
-    #main {
-        width: 69%;
-        margin: 10px 0 10px 30%;
-    }
-}
 #links {
 	position: fixed;
 	top: 224px;
@@ -213,6 +207,20 @@ footer {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
+}
+
+@media (max-width: 1200px) {
+    #main {
+        width: 67%;
+        margin: 10px 0 10px 31%;
+    }
+    #links {
+        width: 25%;
+        margin-left: 1%;
+    }
+    #links li a {
+        width: 100%;
+    }
 }
 
 
