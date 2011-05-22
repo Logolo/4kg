@@ -218,6 +218,9 @@ footer {
         width: 25%;
         margin-left: 1%;
     }
+    #links li {
+        margin-left: 2%;
+    }
     #links li a {
         width: 100%;
     }
