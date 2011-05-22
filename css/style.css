@@ -91,21 +91,26 @@ header {
 	margin-top: 10px;
 	text-align: center;
 }
-#forkme {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 0;
+h1 {
+	margin-bottom: 10px;
+	font-size: 28px;
+	/*font-family: 'Consonlas', 'Inconsolata';*/
 }
-#main {
-	width: 40%;
-	margin: 10px auto;
+h2 {
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+ul+h2 {
+	margin-top: 30px;
+}
+article {
+	margin-bottom: 25px;
 	color: white;
 	padding: 20px;
 	background-image: url('../img/background-light.png');
 	background-repeat: repeat;
 }
-#main img {
+article img {
 	display: block;
 	max-width: 100%;
 	margin: 0px auto;
@@ -116,6 +121,25 @@ p+p {
 ul, li {
 	margin: 0px;
 	padding: 0px;
+}
+ul {
+	margin-left: 20px;
+}
+li+li {
+	margin-top: 10px;
+}
+iframe {
+	max-width: 100%;
+}
+#forkme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+#main {
+	width: 40%;
+	margin: 10px auto;
 }
 #links {
 	position: fixed;
@@ -175,6 +199,9 @@ a.read:active {
 span.big {
 	display: block;
 	font-size: 20px;
+}
+.youtube {
+	text-align: center;
 }
 footer {
 	position: fixed;
