@@ -137,7 +137,7 @@ iframe {
 	margin: 10px auto;
 }
 #screenshots p {
-    display: none;
+    display: inline;
 }
 #screenshots p a img {
     float: left;
