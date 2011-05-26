@@ -98,6 +98,7 @@ ul+h2 {
 	margin-top: 30px;
 }
 article {
+    clear: both;
 	margin-bottom: 25px;
 	color: white;
 	padding: 20px;
@@ -134,6 +135,16 @@ iframe {
 #main {
 	width: 40%;
 	margin: 10px auto;
+}
+#screenshots p {
+    display: none;
+}
+#screenshots p a img {
+    float: left;
+    width: 48%;
+}
+#screenshots p+p a img {
+    float: right;
 }
 #links {
 	position: fixed;
