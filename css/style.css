@@ -146,6 +146,12 @@ iframe {
 #screenshots p+p a img {
     float: right;
 }
+#screenshots p+p+p a img {
+    float: left;
+}
+#screenshots p+p+p a img, p+p+p+p a img {
+    margin-top: 10px;
+}
 #links {
 	position: fixed;
 	top: 224px;
