@@ -149,7 +149,10 @@ iframe {
 #screenshots p+p+p a img {
     float: left;
 }
-#screenshots p+p+p a img, p+p+p+p a img {
+#screenshots p+p+p+p a img {
+    float: right;
+}
+#screenshots p+p+p a img, #screenshots p+p+p+p a img {
     margin-top: 10px;
 }
 #links {
