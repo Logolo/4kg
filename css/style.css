@@ -139,17 +139,11 @@ iframe {
 #screenshots p {
     display: inline;
 }
-#screenshots p a img {
+.leftScreen {
     float: left;
     width: 49%;
 }
-#screenshots p+p a img {
-    float: right;
-}
-#screenshots p+p+p a img {
-    float: left;
-}
-#screenshots p+p+p+p a img {
+.rightScreen {
     float: right;
 }
 #screenshots p+p+p a img, #screenshots p+p+p+p a img {
