@@ -21,38 +21,35 @@ saveFile = function () {
 
 // Fullscreen option.
 checkFullscreen = function () {
-	var width, height, newWidth, newHeight, widthToHeight, heightToWidth, canvas, div;
-	
-	width = document.width;
-	height = document.height;
-	widthToHeight = 854 / 480;
-	heightToWidth = 480 / 854;
+	var width, height, newWidth, newHeight, widthToHeight, newWidthToHeight, canvas, div;
+		
+	widthToHeight = 16 / 9;
+	newWidth = window.innerWidth;
+	newHeight = window.innerHeight;
+	newWidthToHeight = newWidth / newHeight;
 	canvas = document.getElementsByTagName('canvas')[0];
 	div = document.getElementsByTagName('div')[1];
 	
-	// Not optimized very well...
-	newWidth = height * widthToHeight + 'px';
-	newHeight = height + 'px';
-	
-	if (gbox.keyIsHit('d')) {
-		if (!fullscreen) {
-			fullscreen = true;
-			canvas.style.width = '100%';
-			//canvas.style.width = newWidth;
-			canvas.style.height = '100%';
-			//canvas.style.height = newHeight;
-			div.style.display = 'block';
-			gbox.setFps(60);
+	if (!fullscreen) {
+		fullscreen = true;
+		
+		if (newWidthToHeight > widthToHeight) {
+			// window width is too wide relative to desired game width
+			newWidth = newHeight * widthToHeight;
 		}
-		else {
-			fullscreen = false;
-			canvas.style.width = '854px';
-			canvas.style.height = '480px';
-			div.style.display = 'table-cell';
-			gbox.setFps(30);
+		else { // window height is too high relative to desired game height
+			newHeight = newWidth / widthToHeight;
 		}
-		localStorage['fullscreen'] = fullscreen;	// Saves the setting to localStorage.
+		
+		canvas.style.width = newWidth + 'px';
+		canvas.style.height = newHeight + 'px';
 	}
+	else {
+		fullscreen = false;
+		canvas.style.width = '854px';
+		canvas.style.height = '480px';
+	}
+	localStorage['fullscreen'] = fullscreen;	// Saves the setting to localStorage.
 };
 
 // Spawns a generic, static object.
