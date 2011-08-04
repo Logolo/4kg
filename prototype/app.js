@@ -598,7 +598,7 @@ init = function () {
 		}
 		
 		if (gbox.keyIsHit('d')) {
-			fourkg.makeFullscreen();
+			checkFullscreen();
 		}
 		
 		// Kind of a hack...
