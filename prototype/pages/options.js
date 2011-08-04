@@ -174,7 +174,7 @@ savesettings = function () {
 	}
 	
 	gbox._savesettings();
-	window.location = '../4kg.html';
+	window.location = '../index.html';
 };
 
 setusbkeyboarddefault = function () {
