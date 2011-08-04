@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4kg Options</title>
+		<script src="../akihabara/gbox.js"></script>
+		<script src="../akihabara/help.js"></script>
+		<script src="options.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="social_buttons.css">
+	</head>
+	<body onkeydown="return keycustomized(event)" onkeypress="return false" onkeyup="return false" onload="loaddata()">
+		<h1>4kg Options</h1>
+		<div id="controls">
+			<h2>Controls</h2>
+			<p>To assign a key, click a box and then press the key you want.</p>
+			<ul>
+				<li><span class="keyname">Up</span><span class="keymap" id="keyup" onclick="customizekey({key:'up',input:'keyup'})"></span></li>
+				<li><span class="keyname">Down</span><span class="keymap" id="keydown" onclick="customizekey({key:'down',input:'keydown'})"></span></li>
+				<li><span class="keyname">Left</span><span class="keymap" id="keyleft" onclick="customizekey({key:'left',input:'keyleft'})"></span></li>
+				<li><span class="keyname">Right</span><span class="keymap" id="keyright" onclick="customizekey({key:'right',input:'keyright'})"></span></li>
+				<li><span class="keyname">Jump</span><span class="keymap" id="keya" onclick="customizekey({key:'a',input:'keya'})"></span></li>
+				<li><span class="keyname">Run</span><span class="keymap" id="keyb" onclick="customizekey({key:'b',input:'keyb'})"></span></li>
+				<li><span class="keyname">Mute</span><span class="keymap" id="keyc" onclick="customizekey({key:'c',input:'keyc'})"></span></li>
+				<li><span class="keyname">Pause</span><span class="keymap" id="keypause" onclick="customizekey({key:'pause',input:'keypause'})"></span></li>
+			</ul>
+		</div>
+		<div id="settings">
+			<h2>Settings</h2>
+			<ul>
+				<li><input id="noaudio" type="checkbox"  tabindex="1" onclick="checkflag(this)"><label for="noaudio">Disable Audio</label></li>
+				<li>
+					Loading Screen:
+					<select id="loadscreen" tabindex="2" onchange="changedselect(this)">
+						<option value="normal">Standard</option>
+						<option value="c64">Commodore 64</option>				
+					</select>
+				</li>
+				<li>
+					Filter:
+					<select id="fse" tabindex="3" onchange="changedselect(this)">
+						<option value="scanlines">Scanlines</option>
+						<option value="lcd">LCD TV</option>
+						<option value="none">None</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+		<div id="saveData">
+			<h2>Save Data</h2>
+			<ul>
+				<li><input id="deletefile1" type="checkbox" tabindex="4"><label for="deletefile1">Delete A:/?</label></li>
+				<li><input id="deletefile2" type="checkbox" tabindex="5"><label for="deletefile2">Delete B:/?</label></li>
+				<li><input id="deletefile3" type="checkbox" tabindex="6"><label for="deletefile3">Delete C:/?</label></li>
+			</ul>
+		</div>
+		<div id="save">
+			<input type="hidden" id="experimental">
+			<input id="resetSettings" type="button" tabindex="8" onclick="resetdefaults()"
+				onkeydown="if (event.keyCode === 13 || event.keyCode === 32) resetdefaults()" value="Reset Settings">
+			<input id="saveSettings" type="button" tabindex="7" onclick="savesettings()"
+				onkeydown="if (event.keyCode === 13 || event.keyCode === 32) savesettings()" value="Save Settings">
+		</div>
+	</body>
+</html>
