@@ -113,9 +113,7 @@ init = function () {
 	
 	maingame = gamecycle.createMaingame('gamecycle', 'gamecycle');
 	
-	maingame.gameTitleIntroAnimation = function (reset) {
-		checkFullscreen();
-		
+	maingame.gameTitleIntroAnimation = function (reset) {		
 		if (!reset) {
 			gbox.playAudio('bgm-menu');
 			gbox.blitFade(gbox.getBufferContext(), { alpha: 1 });
@@ -127,8 +125,6 @@ init = function () {
 	}, 
 	
 	maingame.pressStartIntroAnimation = function (reset) {
-		checkFullscreen();
-		
 		if (reset) {
 			toys.resetToy(this, 'fixed');
 			return false;
@@ -145,7 +141,6 @@ init = function () {
 	
 	maingame.gameIntroAnimation = function (reset) {
 		saveFile();
-		checkFullscreen();
 		if (reset) {
 			toys.resetToy(this, 'intro-animation');
 			return false;
@@ -384,8 +379,6 @@ init = function () {
 	};
 	
 	maingame.gameEndingIntroAnimation = function (reset) {
-		checkFullscreen();
-		
 		if (reset) {
 			toys.resetToy(this, 'intro-animation');
 			maingame.hud.hideWidgets(['orbs', 'battery', 'redBattery']);
@@ -467,8 +460,6 @@ init = function () {
 	};
 	
 	maingame.endlevelIntroAnimation = function (reset) {
-		checkFullscreen();
-		
 		if (reset) {
 			toys.resetToy(this, 'framecounter');
 			toys.resetToy(this, 'aftercounter');
@@ -484,8 +475,6 @@ init = function () {
 	
 	maingame.gameEvents = function () {
 		var pl = gbox.getObject('player', 'player'), bars, redBars;
-		checkFullscreen();
-		
 		bars = {
 			one: {
 				w: 12,
@@ -606,6 +595,10 @@ init = function () {
 			if (pl.transAmCountdown >= 260) {
 				gbox.blitRect(gbox.getBufferContext(), redBars.five);
 			}
+		}
+		
+		if (gbox.keyIsHit('d')) {
+			fourkg.makeFullscreen();
 		}
 		
 		// Kind of a hack...
@@ -1178,6 +1171,4 @@ gbox.onLoad(function () {
 	else {
 		saveData = JSON.parse(localStorage['saveData']);
 	}
-	
-	checkFullscreen();
 }, false);
